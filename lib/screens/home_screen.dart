@@ -51,21 +51,21 @@ class HomeScreen extends StatelessWidget {
               children: [
                 // items
                 categoryItem(
-                  color: Colors.lightBlue,
+                  color: AppColor.workColor,
                   icon: Icons.assignment,
                   mainText: "work",
                   width: width,
                   subText: "12 Tasks"
                 ),
                 categoryItem(
-                  color: Colors.lightGreen,
+                  color: AppColor.studyColor,
                   icon: Icons.school,
                   mainText: "Studey",
                   width: width,
                   subText: "8 Tasks"
                 ),
                 categoryItem(
-                  color: Colors.orangeAccent,
+                  color: AppColor.favoriteColor,
                   icon: Icons.favorite,
                   mainText: "work",
                   width: width,
@@ -81,8 +81,7 @@ class HomeScreen extends StatelessWidget {
                 Text("Sell all",style: TextStyle(fontWeight: FontWeight.bold,color: AppColor.mainColor),),
               ],
             ),
-            SizedBox(
-              height: 350,
+            Expanded(
               child: ListView.builder(
                 itemCount: tasks.length,
                 itemBuilder: (context, index) {
@@ -143,7 +142,7 @@ Widget categoryItem({
         Column(
           children: [
             Text(mainText, style: TextStyle(fontWeight: FontWeight.bold)),
-            Text(subText, style: TextStyle(color: Colors.grey, fontSize: 12)),
+            Text(subText, style: TextStyle(color: AppColor.subTextColor, fontSize: 12)),
           ],
         ),
       ],
